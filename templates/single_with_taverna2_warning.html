@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% extends "default_head.html" %}
+    {% endextends %}
+
+  <body>
+
+    {% extends "navbar.html" %}
+    {% endextends %}
+
+    <div id="page" class="container">
+       <h1>{% block tagline %}{{ headers.title }}{% endblock %}</h1>
+	   {% extends "taverna2_warning.html" %}
+       {% endextends %}
+
+		{% block content %}<div id="content">{{ content|markdown }}</div>{% endblock %}
+
+    </div>
+
+    {% extends "default_footer.html" %}
+    {% endextends %}
+
+    {% extends "default_scripts.html" %}
+    {% endextends %}
+
+  </body>
+</html>
